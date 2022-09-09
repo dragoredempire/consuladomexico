@@ -2,14 +2,14 @@ import time
 import base64
 import sendgrid
 from sendgrid.helpers.mail import Content, Email, Mail, To, Attachment, FileContent, FileName, FileType, Disposition, ContentId
-
+from playwright.sync_api import sync_playwright
 
 url = 'https://citas.sre.gob.mx/'
 
 headers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \
     (KHTML, like Gecko)  \ Chrome/104.0.0.0 Safari/537.36"}
 
-from playwright.sync_api import sync_playwright
+
 
 with sync_playwright() as p:
     #browser = p.chromium.launch(headless=False)
